@@ -4,7 +4,7 @@ const { Contract } = require("ethers");
 const { ethers } = require("hardhat");
 
 
-describe("Token", () => {
+describe("S-Token", () => {
     let token;
     let owner;
     let recipient;
