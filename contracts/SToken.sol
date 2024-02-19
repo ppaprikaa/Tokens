@@ -33,7 +33,7 @@ contract SToken is ERC20, Ownable{
         _blockReward = amount;
     }
 
-    function getBlockReward() public view returns (uint256) {
+    function getBlockReward() public view returns (uint256) external whenNotDestroyed {
         return _blockReward;
     }
 
