@@ -1,13 +1,16 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzepplin/contracts/token/ERC20/IERC20.sol"
 
-contract SToken is ERC20, Ownable{
-    uint256 private _totalSupply;
-    uint256 private _blockReward;
+contract SToken is IERC{
+    uint private _totalSupply;
+    uint private _blockReward;
     bool private _destroyed;
+
+	string public name = "SToken";
+	string public symbol = "ST";
+	uint8 public decimals = 18;
 
     constructor() ERC20("SToken", "ST") Ownable(msg.sender) {
         _totalSupply = 1000000 * 10 ** decimals();
